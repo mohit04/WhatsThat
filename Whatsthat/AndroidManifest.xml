@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.anirban.monulens"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+    
+    <permission
+        android:name="com.anirban.monulens.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature"/>
+    
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.anirban.monulens.permission.MAPS_RECEIVE"/>
+    
+<uses-permission android:name="android.permission.CAMERA"/>
+<uses-feature android:name="android.hardware.camera" android:required="false"/>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+<uses-feature android:name="android.hardware.camera.front" android:required="false"/>
+<uses-feature android:name="android.hardware.camera.front.autofocus" android:required="false"/>
+
+<uses-permission android:name="android.permission.INTERNET"/>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+ 
+
+<uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
+    
+    
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <activity
+            android:name="com.anirban.monulens.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+              android:configChanges="keyboardHidden|orientation">
+           
+            
+        </activity>
+        
+        
+        <activity
+            android:name="com.anirban.monulens.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+              android:configChanges="keyboardHidden|orientation">
+            
+           <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+           
+            
+        </activity>
+        
+          <activity
+            android:name="com.anirban.monulens.Nearby_Places"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" 
+            android:label="@string/nearby"
+            >
+            
+        </activity>
+        
+           <activity android:name=".ShareBarActivity"
+                  android:configChanges="keyboardHidden|orientation"
+                  android:screenOrientation="portrait"
+                  android:label="@string/share"
+                android:theme="@android:style/Theme.NoTitleBar.Fullscreen" 
+                  ></activity>
+           
+           <activity android:name=".More_Info"
+                  android:configChanges="keyboardHidden|orientation"
+                  android:screenOrientation="portrait"
+                  android:label="@string/share"
+                android:theme="@android:style/Theme.NoTitleBar.Fullscreen" 
+                  ></activity>
+           
+           
+           <activity  android:name="com.nostra13.universalimageloader.sample.activity.HomeActivity"
+                  android:configChanges="keyboardHidden|orientation"
+                  android:screenOrientation="portrait"
+                 android:label="@string/gallery"
+                android:theme="@android:style/Theme.Holo.Light.DarkActionBar" 
+                  ></activity>
+           
+           <activity
+            android:name="com.nostra13.universalimageloader.sample.activity.SimpleImageActivity"
+             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+             
+            />
+		<activity
+			android:name="com.nostra13.universalimageloader.sample.activity.ComplexImageActivity"
+			 android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+			 />
+		
+		<activity
+			android:name="com.anirban.monulens.Downloads"
+			 android:label="@string/downloads"
+			android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+			 />
+		
+		 <!-- Widget -->
+        <receiver android:name="com.nostra13.universalimageloader.sample.widget.UILWidgetProvider" >
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_provider" />
+
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+        </receiver>
+           
+          
+        <meta-data android:name="com.google.android.gms.version"
+        android:value="@integer/google_play_services_version" />
+        
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyA6JtZYRQWs5gAOaf0xT528GOPRqce1F5A"/>
+ 
+         
+    </application>
+    
+    
+   
+    
+</manifest>

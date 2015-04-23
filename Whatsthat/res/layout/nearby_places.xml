@@ -1,0 +1,57 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+   
+    tools:context=".MainActivity">
+    
+    <LinearLayout 
+    android:orientation="horizontal"
+    android:id="@+id/topbar1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="7dp"
+    android:background="@drawable/blue_gradient"
+    >   
+	    <TextView 
+			android:id="@+id/textview1"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:layout_gravity="center_vertical"
+			android:textColor="#ffffff"
+			android:textSize="14sp"
+			android:text="Nearby Places"
+			android:textStyle="bold"
+		/>
+	</LinearLayout>
+
+     
+
+     <Button
+         android:id="@+id/btn_find"
+         android:layout_width="wrap_content"
+         android:layout_height="60dp"
+         android:layout_above="@+id/map"
+         android:layout_alignParentRight="true"
+         android:text="@string/find_btn" />
+
+     <Spinner
+         android:id="@+id/spr_place_type"
+         android:layout_width="wrap_content"
+         android:layout_height="60dp"
+         android:layout_alignParentLeft="true"
+         android:layout_toLeftOf="@id/btn_find"
+         android:layout_below="@+id/topbar1" />
+     
+     <fragment
+         android:id="@+id/map"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:layout_alignParentRight="true"
+         android:layout_below="@id/spr_place_type"
+         class="com.google.android.gms.maps.SupportMapFragment" />
+    
+</RelativeLayout>

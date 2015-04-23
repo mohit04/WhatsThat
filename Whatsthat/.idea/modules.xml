@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$USER_HOME$/Downloads/ArcMenu/ArcMenuLibrary/ArcMenuLibrary.iml" filepath="$USER_HOME$/Downloads/ArcMenu/ArcMenuLibrary/ArcMenuLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Whatsthat.iml" filepath="$PROJECT_DIR$/.idea/Whatsthat.iml" />
+      <module fileurl="file://C:/opencv 2.4.9/OpenCV-2.4.9-android-sdk/sdk/java/java.iml" filepath="C:/opencv 2.4.9/OpenCV-2.4.9-android-sdk/sdk/java/java.iml" />
+    </modules>
+  </component>
+</project>
+
